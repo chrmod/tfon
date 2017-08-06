@@ -1,1 +1,13 @@
-<h1>Hi tfon</h1>
+<input value={{value}} />
+<hr/>
+<ul>
+  {{#each results key="@index" as |result|}}
+    <li>
+      <a href={{result.url}}>
+        {{result.snippet.title}}
+      </a>
+      <br/>
+      {{result.snippet.description}}
+    </li>
+  {{/each}}
+</ul>
