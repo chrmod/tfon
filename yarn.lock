@@ -166,6 +166,10 @@
   dependencies:
     "@glimmer/util" "^0.26.2"
 
+"@types/node@^8.0.19":
+  version "8.0.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.19.tgz#e46e2b0243de7d03f15b26b45c59ebb84f657a4e"
+
 "@types/rsvp@^3.0.0":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/rsvp/-/rsvp-3.3.1.tgz#6420db1ad5f9fcca040002266de89feb7eea1096"
@@ -4800,14 +4804,14 @@ raureif-glimmer@^0.1.0:
     broccoli-merge-trees "^2.0.0"
     ember-build-utilities "^0.4.0"
 
-raureif-typescript@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/raureif-typescript/-/raureif-typescript-2.0.0.tgz#656780bf9f2bfcacf0dc11b2cba32f7f922d224b"
+raureif-typescript@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/raureif-typescript/-/raureif-typescript-2.1.0.tgz#5357c5b481e22779239777fa2a6d3369bde4ad20"
   dependencies:
     broccoli-funnel "^1.2.0"
     broccoli-merge-trees "^2.0.0"
+    broccoli-source "^1.1.0"
     broccoli-typescript-compiler "^1.0.1"
-    typescript "2.4.2"
 
 raureif@2.0.2:
   version "2.0.2"
@@ -5801,7 +5805,7 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.4.2:
+typescript@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.4.2.tgz#f8395f85d459276067c988aa41837a8f82870844"
 
