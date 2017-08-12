@@ -20,6 +20,7 @@
     "browser-core": "cliqz-oss/browser-core",
     "raureif": "2.0.2",
     "raureif-glimmer": "^0.1.0",
+    "raureif-sass": "chrmod/raureif-sass#2.1",
     "raureif-typescript": "2.1.0",
     "typescript": "^2.4.2",
     "yarn": "^0.27.5"
