@@ -2207,9 +2207,9 @@ cli-width@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
 
-cliqz-logo-database@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/cliqz-logo-database/-/cliqz-logo-database-0.1.0.tgz#9333d3840da445e17f72997b2054611166231ed0"
+cliqz-logo-database@0.1.1:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/cliqz-logo-database/-/cliqz-logo-database-0.1.2.tgz#687b9802f4d01e51162956a67be19eab7f4b4830"
   dependencies:
     tldjs "^2.0.0"
 
@@ -6139,9 +6139,9 @@ raureif-glimmer@^0.1.0:
     broccoli-merge-trees "^2.0.0"
     ember-build-utilities "^0.4.0"
 
-raureif-sass@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/raureif-sass/-/raureif-sass-0.1.0.tgz#1c6e1d0addcef889ecc8efd21ec382970099eb75"
+raureif-sass@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/raureif-sass/-/raureif-sass-0.2.0.tgz#473b8783b2b2dac71282895f5efdde966ae5c9b2"
   dependencies:
     broccoli-funnel "^1.2.0"
     broccoli-merge-trees "^2.0.0"

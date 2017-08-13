@@ -1,11 +1,13 @@
-<div>
-  <search-field @onChange={{action updateValue}} />
+<div class="app">
+  <div>
+    <search-field @onChange={{action updateValue}} />
+  </div>
+  <hr/>
+  <ul>
+    {{#each results key="@index" as |result|}}
+      <li>
+        <generic-result @model={{result}} />
+      </li>
+    {{/each}}
+  </ul>
 </div>
-<hr/>
-<ul>
-  {{#each results key="@index" as |result|}}
-    <li>
-      <generic-result @model={{result}} />
-    </li>
-  {{/each}}
-</ul>

@@ -1,3 +1,60 @@
 body {
   background-color: #eee;
+  font-family: sans;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin: 0;
+  }
+}
+
+.app {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+.result {
+  overflow: hidden;
+  display: block;
+  clear: both;
+  background-color: white;
+  border-radius: 2px;
+  padding: 4px;
+  margin: 4px 0px;
+  color: #1A1A25;
+  text-decoration: none;
+
+  &.selected, &:hover {
+    background-color: #00AEF0;
+    color: white;
+
+    .url {
+      color: white;
+    }
+  }
+
+  img {
+    float: left;
+    margin-right: 4px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .url {
+    color: #2B5993;
+    color: #0078CA;
+  }
 }

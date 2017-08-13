@@ -1,8 +1,10 @@
-<div>
-  <img src={{logo.logoUrl}} style="width: 30px; height: 30px; background-color: #{{logo.color}};" />
-  <a href={{@model.url}}>
-    {{@model.snippet.title}}
-  </a>
-  <br/>
-  {{@model.snippet.description}}
-</div>
+<a href={{@model.url}} class="result">
+  <img src={{logo.logoUrl}} class="logo" style="background-color: #{{logo.color}};" />
+  <p>
+    {{#if @model.snippet.title}}
+      {{@model.snippet.title}} -&nbsp;
+    {{/if}}<span class="url">{{@model.url}}</span>
+    <br/>
+    {{@model.snippet.description}}
+  </p>
+</a>

@@ -20,7 +20,7 @@
     "browser-core": "cliqz-oss/browser-core",
     "raureif": "2.0.2",
     "raureif-glimmer": "^0.1.0",
-    "raureif-sass": "chrmod/raureif-sass#2.1",
+    "raureif-sass": "0.2.0",
     "raureif-typescript": "2.1.0",
     "typescript": "^2.4.2",
     "yarn": "^0.27.5"
@@ -29,7 +29,7 @@
   "dependencies": {
     "@glimmer/application": "^0.7.2",
     "@glimmer/component": "^0.6.0",
-    "cliqz-logo-database": "^0.1.0",
+    "cliqz-logo-database": "0.1.1",
     "rxjs": "^5.4.2"
   }
 }
