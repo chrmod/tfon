@@ -37,6 +37,18 @@ const reducer = (state, action) => {
     };
   }
 
+  if (action.type === 'SELECT_RESULT') {
+    return {
+      ...state,
+      results: [
+        ...state.results.map(r => ({
+          ...r,
+          selected: action.payload === r,
+        }),
+      ]
+    };
+  }
+
   return state;
 };
 

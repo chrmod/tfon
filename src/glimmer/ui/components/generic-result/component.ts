@@ -8,5 +8,11 @@ export default class extends Component {
     const logo = getLogo(this.args.result.url);
     return logo;
   }
+
+  @tracked('args')
+  get classNames() {
+    return this.args.result.selected ? 'selected' : '';
+  }
+
 }
 
