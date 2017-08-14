@@ -30,6 +30,7 @@
     "@glimmer/application": "^0.7.2",
     "@glimmer/component": "^0.6.0",
     "cliqz-logo-database": "0.1.1",
+    "redux": "^3.7.2",
     "rxjs": "^5.4.2"
   }
 }
