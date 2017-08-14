@@ -1,13 +1,13 @@
 import Component, { tracked } from '@glimmer/component';
-import store from '../../../../data/store';
+import store, { defaultState } from '../../../../data/store';
 
 export default class extends Component {
 
-  @tracked results = [];
+  @tracked state = defaultState;
 
   didInsertElement() {
     store.subscribe(() => {
-      this.results = store.getState().results;
+      this.state = store.getState();
     });
   }
 }

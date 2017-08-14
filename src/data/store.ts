@@ -40,8 +40,11 @@ const reducer = (state, action) => {
   return state;
 };
 
-const store = createStore(reducer, {
+export const defaultState = {
   query: '',
-});
+  results: [],
+}
+
+const store = createStore(reducer, defaultState);
 
 export default store;

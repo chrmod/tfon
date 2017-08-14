@@ -1,12 +1,12 @@
 <div class="app">
   <div>
-    <search-field />
+    <search-field @query={{state.query}} />
   </div>
   <hr/>
   <ul>
-    {{#each results key="@index" as |result|}}
+    {{#each state.results key="@index" as |result|}}
       <li>
-        <generic-result @model={{result}} />
+        <generic-result @result={{result}} />
       </li>
     {{/each}}
   </ul>
