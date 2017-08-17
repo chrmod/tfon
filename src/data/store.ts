@@ -44,7 +44,33 @@ const reducer = (state, action) => {
         ...state.results.map(r => ({
           ...r,
           selected: action.payload === r,
-        }),
+        })),
+      ]
+    };
+  }
+
+  if (action.type === 'NEXT_RESULT') {
+    const currentResultIndex = state.results.findIndex(r => r.selected || false);
+    return {
+      ...state,
+      results: [
+        ...state.results.map((r, i) => ({
+          ...r,
+          selected: i === (currentResultIndex + 1),
+        }))
+      ]
+    };
+  }
+
+  if (action.type === 'PREV_RESULT') {
+    const currentResultIndex = state.results.findIndex(r => r.selected);
+    return {
+      ...state,
+      results: [
+        ...state.results.map((r, i) => ({
+          ...r,
+          selected: i === (currentResultIndex - 1),
+        }))
       ]
     };
   }
@@ -55,6 +81,7 @@ const reducer = (state, action) => {
 export const defaultState = {
   query: '',
   results: [],
+  selectedIndex: 0,
 }
 
 const store = createStore(

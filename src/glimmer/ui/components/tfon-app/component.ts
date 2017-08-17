@@ -1,7 +1,9 @@
 import * as Rx from 'rxjs';
 import Component, { tracked } from '@glimmer/component';
 import store, { defaultState } from '../../../../data/store';
-import { selectResult } from '../../../../data/actions/results';
+import { selectResult, nextResult, prevResult } from '../../../../data/actions/results';
+
+const upDownKeys = ['ArrowUp', 'ArrowDown'];
 
 export default class extends Component {
 
@@ -19,5 +21,16 @@ export default class extends Component {
       .map(
         el => this.state.results.find(r => r.url === el.getAttribute('href')))
       .subscribe(selectResult);
+
+    Rx.Observable.fromEvent(window, 'keyup')
+      .debounceTime(100)
+      .filter((e: any) => upDownKeys.indexOf(e.key) >= 0)
+      .subscribe((e) => {
+        if (e.key === 'ArrowUp') {
+          prevResult();
+        } else if (e.key === 'ArrowDown') {
+          nextResult();
+        }
+      });
   }
 }

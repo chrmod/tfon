@@ -6,3 +6,15 @@ export function selectResult(result) {
     payload: result,
   });
 }
+
+export function nextResult() {
+  store.dispatch({
+    type: 'NEXT_RESULT'
+  });
+}
+
+export function prevResult() {
+  store.dispatch({
+    type: 'PREV_RESULT'
+  });
+}
