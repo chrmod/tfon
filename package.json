@@ -17,7 +17,6 @@
   ],
   "devDependencies": {
     "@types/node": "^8.0.19",
-    "browser-core": "cliqz-oss/browser-core",
     "raureif": "2.0.2",
     "raureif-glimmer": "^0.1.0",
     "raureif-sass": "0.2.0",
@@ -29,7 +28,8 @@
   "dependencies": {
     "@glimmer/application": "^0.7.2",
     "@glimmer/component": "^0.6.0",
-    "cliqz-logo-database": "0.1.1",
+    "@glimmer/resolver": "^0.4.1",
+    "cliqz-logo-database": "0.1.2",
     "redux": "^3.7.2",
     "rxjs": "^5.4.2"
   }
