@@ -5,13 +5,12 @@ export default class extends Component {
 
   @tracked('args')
   get logo() {
-    const logo = getLogo(this.args.result.url);
+    const logo = getLogo(this.args.url);
     return logo;
   }
 
-  @tracked('args')
-  get classNames() {
-    return this.args.result.selected ? 'selected' : '';
+  @tracked('args') get classNames() {
+    return this.args.selected ? 'selected' : '';
   }
 
 }

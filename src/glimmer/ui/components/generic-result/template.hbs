@@ -1,10 +1,10 @@
-<a href={{@result.url}} class="result {{classNames}}">
+<a href={{@url}} class="result {{classNames}}">
   <img src={{logo.logoUrl}} class="logo" style="background-color: #{{logo.color}};" />
   <p>
-    {{#if @result.snippet.title}}
-      {{@result.snippet.title}} -&nbsp;
-    {{/if}}<span class="url">{{@result.url}}</span>
+    {{#if @title}}
+      {{@title}} -&nbsp;
+    {{/if}}<span class="url">{{@url}}</span>
     <br/>
-    {{@result.snippet.description}}
+    {{@description}}
   </p>
 </a>

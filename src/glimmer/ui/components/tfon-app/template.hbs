@@ -6,7 +6,12 @@
   <ul>
     {{#each state.results key="@index" as |result|}}
       <li>
-        <generic-result @result={{result}} />
+        <generic-result
+          @url={{result.url}}
+          @selected={{result.selected}}
+          @title={{result.snippet.title}}
+          @description={{result.snippet.description}}
+        />
       </li>
     {{/each}}
   </ul>
