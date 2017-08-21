@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "@glimmer/application": "^0.7.2",
-    "@glimmer/component": "^0.6.0",
+    "@glimmer/component": "https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz",
     "@glimmer/resolver": "^0.4.1",
     "cliqz-logo-database": "0.1.2",
     "redux": "^3.7.2",

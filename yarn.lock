@@ -78,6 +78,16 @@
     "@glimmer/runtime" "^0.26.2"
     "@glimmer/util" "^0.26.2"
 
+"@glimmer/component@https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz":
+  version "0.6.0"
+  resolved "https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz#bdcf3671f111cee79b0fc92305b544527d10bfcc"
+  dependencies:
+    "@glimmer/di" "^0.1.9"
+    "@glimmer/env" "^0.1.7"
+    "@glimmer/reference" "^0.26.2"
+    "@glimmer/runtime" "^0.26.2"
+    "@glimmer/util" "^0.26.2"
+
 "@glimmer/di@^0.1.9":
   version "0.1.11"
   resolved "https://registry.yarnpkg.com/@glimmer/di/-/di-0.1.11.tgz#a6878c07a13a2c2c76fcde598a5c97637bfc4280"
