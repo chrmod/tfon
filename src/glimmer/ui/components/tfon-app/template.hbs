@@ -1,18 +1,19 @@
 <div class="app">
-  <div>
-    <search-field @query={{state.query}} />
-  </div>
-  <hr/>
-  <ul>
+  <section class="top">
+  </section>
+  <section class="center">
+    <div>
+      <search-field @query={{state.query}} />
+    </div>
+  </section>
+  <section class="bottom">
     {{#each state.results key="@index" as |result|}}
-      <li>
-        <generic-result
-          @url={{result.url}}
-          @selected={{result.selected}}
-          @title={{result.snippet.title}}
-          @description={{result.snippet.description}}
+      <generic-result
+        @url={{result.url}}
+        @selected={{result.selected}}
+        @title={{result.snippet.title}}
+        @description={{result.snippet.description}}
         />
-      </li>
     {{/each}}
-  </ul>
+  </section>
 </div>
