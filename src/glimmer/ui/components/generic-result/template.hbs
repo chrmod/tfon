@@ -1,10 +1,19 @@
-<a href={{@url}} class="result {{classNames}}">
-  <img src={{logo.logoUrl}} class="logo" style="background-color: #{{logo.color}};" />
-  <p>
-    {{#if @title}}
-      {{@title}} -&nbsp;
-    {{/if}}<span class="url">{{@url}}</span>
-    <br/>
-    {{@description}}
-  </p>
-</a>
+<div class="generic-result">
+  <a href={{@url}} class="result {{classNames}}">
+    <img src={{logo.logoUrl}} class="logo" style="background-color: #{{logo.color}};" />
+    <p>
+      {{#if @title}}
+        {{@title}} -&nbsp;
+      {{/if}}<span class="url">{{@url}}</span>
+      <br/>
+      {{@description}}
+    </p>
+  </a>
+  <ul class="deep-results">
+    {{#each deepResults key="@index" as |result|}}
+      <li>
+        <img src={{result.image}} />
+      </li>
+    {{/each}}
+  </ul>
+</div>

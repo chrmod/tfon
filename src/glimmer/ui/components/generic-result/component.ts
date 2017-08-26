@@ -13,5 +13,13 @@ export default class extends Component {
     return this.args.selected ? 'selected' : '';
   }
 
+  @tracked('args') get deepResults() {
+    const results = this.args.deepResults || [];
+    const r = results.filter(r => r.type === 'images')[0] || { links: [] };
+
+    console.log(r);
+    return r.links;
+  }
+
 }
 

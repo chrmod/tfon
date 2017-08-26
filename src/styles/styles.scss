@@ -29,9 +29,10 @@ ul {
   flex-direction: column;
 
   @import 'search-field';
+  @import 'generic-result';
 
   .top {
-    height: 200px;
+    height: 200px
   }
 }
 
@@ -40,38 +41,4 @@ ul {
   height: 30px;
   border-radius: 2px;
   padding: 3px;
-}
-
-.result {
-  overflow: hidden;
-  display: block;
-  clear: both;
-  background-color: white;
-  padding: 10px;
-  margin: 10px 0px;
-  color: #1A1A25;
-  text-decoration: none;
-
-  &.selected {
-    background-color: black;
-    color: white;
-
-    .url {
-      color: white;
-    }
-  }
-
-  img {
-    float: left;
-    margin-right: 4px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .url {
-    color: #2B5993;
-    color: #0078CA;
-  }
 }

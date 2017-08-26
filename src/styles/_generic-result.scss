@@ -1,0 +1,50 @@
+.generic-result {
+  overflow: hidden;
+  background-color: white;
+  margin: 10px 0px;
+  padding: 10px;
+
+  .result {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    clear: both;
+    color: #1A1A25;
+    text-decoration: none;
+
+    &.selected {
+      background-color: black;
+      color: white;
+
+      .url {
+        color: white;
+      }
+    }
+
+    img {
+      float: left;
+      margin-right: 4px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .url {
+      color: #2B5993;
+      color: #0078CA;
+    }
+  }
+
+  .deep-results {
+    width: 50%;
+    display: inline-block;
+
+    img {
+      float: left;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
