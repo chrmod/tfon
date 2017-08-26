@@ -14,7 +14,7 @@ export default class extends Component {
 
     Rx.Observable.fromEvent(input, 'keyup')
       .debounceTime(100)
-      .filter(ev => SPECIAL_KEYS.indexOf(ev.which) > -1 ? false : ev.key)
+      .filter((ev: any) => SPECIAL_KEYS.indexOf(ev.which) > -1 ? false : ev.key)
       .map((e: any) => e.target.value)
       .subscribe(queryAction);
   }

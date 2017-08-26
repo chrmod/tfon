@@ -14,7 +14,9 @@ export default class extends Component {
       this.state = store.getState();
     });
 
-    Rx.Observable.fromEvent(this.element, 'mousemove')
+    const app = <HTMLElement> this.element;
+
+    Rx.Observable.fromEvent(app, 'mousemove')
       .map((e: any) => e.target.closest('.result'))
       // TODO: something is wrong here, if debunce is set the view update with unexpected delay
       .filter(r => r)
