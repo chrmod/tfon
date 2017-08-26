@@ -64,12 +64,18 @@ const reducer = (state, action) => {
 
   if (action.type === 'PREV_RESULT') {
     const currentResultIndex = state.results.findIndex(r => r.selected);
+    let nextIndex = currentResultIndex - 1;
+
+    if (nextIndex < -1) {
+      nextIndex = state.results.length - 1;
+    }
+
     return {
       ...state,
       results: [
         ...state.results.map((r, i) => ({
           ...r,
-          selected: i === (currentResultIndex - 1),
+          selected: nextIndex === i,
         }))
       ]
     };
