@@ -3,7 +3,10 @@
   </section>
   <section class="center">
     <div>
-      <search-field @query={{state.query}} />
+      <search-field
+        @query={{state.urlbar.value}}
+        @isFocused={{state.urlbar.isFocused}}
+      />
     </div>
   </section>
   <section class="bottom">

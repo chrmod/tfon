@@ -6,16 +6,30 @@ const SPECIAL_KEYS = [8, 9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 
 
 export default class extends Component {
 
-  didInsertElement() {
+  get input() {
     const el = <HTMLElement> this.element;
-    const input = el.querySelector('input');
+    return el.querySelector('input');
+  }
 
-    input.focus();
+  didInsertElement() {
+    this.updateInput();
 
-    Rx.Observable.fromEvent(input, 'keyup')
+    Rx.Observable.fromEvent(this.input, 'keyup')
       .debounceTime(100)
       .filter((ev: any) => SPECIAL_KEYS.indexOf(ev.which) > -1 ? false : ev.key)
       .map((e: any) => e.target.value)
       .subscribe(queryAction);
+  }
+
+  didUpdate() {
+    this.updateInput();
+  }
+
+  updateInput() {
+    if (this.args.isFocused) {
+      this.input.focus();
+    } else {
+      this.input.blur();
+    }
   }
 }

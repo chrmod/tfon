@@ -17,9 +17,7 @@ export default class extends Component {
     const results = this.args.deepResults || [];
     const r = results.filter(r => r.type === 'images')[0] || { links: [] };
 
-    console.log(r);
     return r.links;
   }
 
 }
-

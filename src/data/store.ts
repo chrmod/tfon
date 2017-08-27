@@ -11,20 +11,27 @@ const updateResults = async (query) => {
     type: 'RESULTS',
     payload: results.results,
   })
-}
+};
 
 const reducer = (state, action) => {
   if (action.type === 'QUERY') {
-    if (action.payload) {
-      updateResults(action.payload);
+    const query = action.payload;
+    if (query) {
+      updateResults(query);
       return {
         ...state,
-        query: action.payload,
+        urlbar: {
+          ...state.urlbar,
+          value: query,
+        },
       };
     } else {
       return {
         ...state,
-        query: '',
+        urlbar: {
+          value: '',
+          isFocused: true,
+        },
         results: [],
       };
     }
@@ -40,23 +47,37 @@ const reducer = (state, action) => {
   if (action.type === 'SELECT_RESULT') {
     return {
       ...state,
+      urlbar: {
+        ...state.urlbar,
+        isFocused: false,
+      },
       results: [
         ...state.results.map(r => ({
           ...r,
           selected: action.payload === r,
         })),
-      ]
+      ],
     };
   }
 
   if (action.type === 'NEXT_RESULT') {
     const currentResultIndex = state.results.findIndex(r => r.selected || false);
+    let nextIndex = currentResultIndex + 1;
+
+    if (nextIndex >= state.results.length) {
+      nextIndex = -1;
+    }
+
     return {
       ...state,
+      urlbar: {
+        ...state.urlbar,
+        isFocused: nextIndex === -1;
+      },
       results: [
         ...state.results.map((r, i) => ({
           ...r,
-          selected: i === (currentResultIndex + 1),
+          selected: i === nextIndex,
         }))
       ]
     };
@@ -72,6 +93,10 @@ const reducer = (state, action) => {
 
     return {
       ...state,
+      urlbar: {
+        ...state.urlbar,
+        isFocused: nextIndex === -1,
+      },
       results: [
         ...state.results.map((r, i) => ({
           ...r,
@@ -85,7 +110,10 @@ const reducer = (state, action) => {
 };
 
 export const defaultState = {
-  query: '',
+  urlbar: {
+    value: '',
+    isFocused: true,
+  },
   results: [],
   selectedIndex: 0,
 }
