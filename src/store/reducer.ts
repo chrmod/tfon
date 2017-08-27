@@ -1,23 +1,7 @@
-import { createStore } from 'redux';
-
-const searchUrl = (query) =>
-  `http://api.cliqz.com/api/v2/results?country=de&q=${query}`;
-
-const updateResults = async (query) => {
-  const url = searchUrl(query);
-  const response = await fetch(url);
-  const results = await response.json();
-  store.dispatch({
-    type: 'RESULTS',
-    payload: results.results,
-  })
-};
-
-const reducer = (state, action) => {
+export default function (state, action) {
   if (action.type === 'QUERY') {
     const query = action.payload;
     if (query) {
-      updateResults(query);
       return {
         ...state,
         urlbar: {
@@ -72,7 +56,7 @@ const reducer = (state, action) => {
       ...state,
       urlbar: {
         ...state.urlbar,
-        isFocused: nextIndex === -1;
+        isFocused: nextIndex === -1,
       },
       results: [
         ...state.results.map((r, i) => ({
@@ -108,20 +92,3 @@ const reducer = (state, action) => {
 
   return state;
 };
-
-export const defaultState = {
-  urlbar: {
-    value: '',
-    isFocused: true,
-  },
-  results: [],
-  selectedIndex: 0,
-}
-
-const store = createStore(
-  reducer,
-  defaultState,
-  (<any>window).__REDUX_DEVTOOLS_EXTENSION__ && (<any>window).__REDUX_DEVTOOLS_EXTENSION__(),
-);
-
-export default store;

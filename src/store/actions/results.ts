@@ -1,20 +1,18 @@
-import store from '../store';
-
 export function selectResult(result) {
-  store.dispatch({
+  return {
     type: 'SELECT_RESULT',
     payload: result,
-  });
+  };
 }
 
 export function nextResult() {
-  store.dispatch({
+  return {
     type: 'NEXT_RESULT'
-  });
+  };
 }
 
 export function prevResult() {
-  store.dispatch({
+  return {
     type: 'PREV_RESULT'
-  });
+  };
 }

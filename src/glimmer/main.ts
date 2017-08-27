@@ -6,6 +6,16 @@ import moduleMap from '../glimmer-config/module-map';
 export default class App extends Application {
   constructor() {
     const moduleRegistry = new BasicModuleRegistry(moduleMap);
+
+    (<any>resolverConfiguration).types.services = {
+      definitiveCollection: 'services',
+    };
+    (<any>resolverConfiguration).collections.services = {
+      types: ['service'],
+      defaultType: 'service',
+      privateCollections: ['utils']
+    };
+
     const resolver = new Resolver(resolverConfiguration, moduleRegistry);
 
     super({

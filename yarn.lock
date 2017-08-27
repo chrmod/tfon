@@ -68,17 +68,7 @@
     "@glimmer/wire-format" "^0.26.2"
     simple-html-tokenizer "^0.3.0"
 
-"@glimmer/component@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/component/-/component-0.6.0.tgz#60b88afb7ba87a9d30d44fe2dd167609be1e19cc"
-  dependencies:
-    "@glimmer/di" "^0.1.9"
-    "@glimmer/env" "^0.1.7"
-    "@glimmer/reference" "^0.26.2"
-    "@glimmer/runtime" "^0.26.2"
-    "@glimmer/util" "^0.26.2"
-
-"@glimmer/component@https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz":
+"@glimmer/component@^0.6.0", "@glimmer/component@https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz":
   version "0.6.0"
   resolved "https://github.com/chrmod/glimmer-component/releases/download/0.7.0pre/glimmer-component-0.7.0pre.tgz#bdcf3671f111cee79b0fc92305b544527d10bfcc"
   dependencies:
@@ -5036,6 +5026,10 @@ redent@^1.0.0:
   dependencies:
     indent-string "^2.1.0"
     strip-indent "^1.0.1"
+
+redux-thunk@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
 
 redux@^3.7.2:
   version "3.7.2"
